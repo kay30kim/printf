@@ -6,16 +6,16 @@
 /*   By: kyung-ki <kyung-ki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 16:08:54 by kyung-ki          #+#    #+#             */
-/*   Updated: 2023/10/29 17:32:50 by kyung-ki         ###   ########.fr       */
+/*   Updated: 2023/10/29 18:10:32 by kyung-ki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef _FT_PRINTF_
-# define _FT_PRINTF_
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-#include <stdlib.h>
-#include <stdarg.h>
-#include <unistd.h>
+# include <stdlib.h>
+# include <stdarg.h>
+# include <unistd.h>
 
 char	*ft_itoa(int n);
 int		ft_print_c(char c);
@@ -26,7 +26,7 @@ void	ft_putnb(unsigned long long num);
 int		ft_print_p(unsigned long long address);
 int		ft_print_s(char *str);
 char	*ft_uitoa(unsigned int n);
-int		ft_print_u(unsigned int);
+int		ft_print_u(unsigned int n);
 int		ft_print_x(unsigned int num, char c);
 int		ft_print_percent(void);
 int		ft_format(va_list args, const char format);
