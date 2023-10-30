@@ -6,7 +6,7 @@
 /*   By: kyung-ki <kyung-ki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 16:19:20 by kyung-ki          #+#    #+#             */
-/*   Updated: 2023/10/29 17:32:11 by kyung-ki         ###   ########.fr       */
+/*   Updated: 2023/10/30 09:57:35 by kyung-ki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_hex_len(unsigned	int num)
 	return (len);
 }
 
-int	ft_print_x(unsigned int num, char format)
+void ft_put_x(unsigned int num, char format)
 {
 	if (num >= 16)
 	{
@@ -43,6 +43,19 @@ int	ft_print_x(unsigned int num, char format)
 			if (format == 'X')
 				ft_putchar_fd((num - 10 + 'A'), 1);
 		}
+	}
+}
+
+int	ft_print_x(unsigned int num, char format)
+{
+	if (num == 0)
+	{
+		write(1, "0", 1);
+		return (1);
+	}
+	else 
+	{
+		ft_put_x(num, format);
 	}
 	return (ft_hex_len(num));
 }
